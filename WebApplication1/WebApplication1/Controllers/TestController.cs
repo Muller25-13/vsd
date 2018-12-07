@@ -22,5 +22,10 @@ namespace WebApplication1.Controllers
             ct.Add = "gl";
             return ct;
         }
+
+        public ActionResult GetView()
+        {
+            return View("MyView");
+        }
     }
 }
