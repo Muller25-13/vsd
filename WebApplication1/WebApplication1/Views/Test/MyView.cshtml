@@ -1,6 +1,8 @@
-﻿
+﻿@using WebApplication1.Models;
 @{
     Layout = null;
+    Employe emp = (Employe)ViewData["EmpKey"];
+    string t =(string)ViewData["greeting"];
 }
 
 <!DOCTYPE html>
@@ -12,7 +14,11 @@
 </head>
 <body>
     <div> 
-        FirstMyView好
+        <h1>@emp.Name,@t</h1>
+        <h1>@emp.Name,@((string)ViewData["greeting"])</h1>
+        <h2>员工信息</h2>
+        <p>姓名:@emp.Name</p>
+        <p>工资:@emp.Salary.ToString("c")</p>
     </div>
 </body>
 </html>

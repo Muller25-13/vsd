@@ -25,7 +25,35 @@ namespace WebApplication1.Controllers
 
         public ActionResult GetView()
         {
+            string greeting;
+            DateTime dt = DateTime.Now;
+            int h = dt.Hour;
+            if (h < 11)
+            {
+                greeting = "早上好";
+            }
+            else if(h>11&&h<13)
+            {
+                greeting = "中午好";
+            }
+            else
+            {
+                greeting = "下午好";
+            }
+            ViewData["greeting"] = greeting;
+
+            Employe emp = new Employe();
+            emp.Name = "李四";
+            emp.Salary = 20002;
+           
+            ViewData["EmpKey"] = emp;
             return View("MyView");
+
+          
+            
+
+
+
         }
     }
 }
