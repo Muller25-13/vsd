@@ -32,14 +32,20 @@ namespace WebApplication1.Controllers
             ViewBag.Greeting = greeting;
 
             Cust ct = new Cust();
+            Employe emp = new Employe();
+        
+            ViewData["Customer"] = ct;
+            ViewData["EmpKey"] = emp;
 
-            ct.CustomerName = "小熊";
+            emp.Name = "吉吉国王";
+            emp.Salary = 1000;
+            ct.CustomerName = "本田思域";
             ct.Add = "日本";
 
             //ViewData["EmpKey"] = emp;
             
-
-            return View("GetView",ct);
+            return View("GetView");
+           
 
         }
     }

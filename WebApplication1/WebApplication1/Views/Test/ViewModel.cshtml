@@ -1,13 +1,13 @@
 ﻿
 @using WebApplication1.ViewModels;
 
-@model All
+@model AllViewModel
 @{
     Layout = null;
     //Employe emp = (Employe)ViewData["EmpKey"];
     //Employe emp = ViewBag.EmpKey;
     //string t =(string)ViewData["greeting"];
-    
+
 }
 
 <!DOCTYPE html>
@@ -18,7 +18,7 @@
     <title>MyView</title>
 </head>
 <body>
-    <div> 
+    <div>
         <hr />
         <h1>@Model.Greeting,@Model.UserName</h1>
         <hr />
@@ -30,10 +30,10 @@
         <h2>客户信息</h2>
         <p>姓名:@Model.CustomerName</p>
         <p>地址:@Model.CusAdd</p>
-        
 
-      
-         
+
+
+
     </div>
 </body>
 </html>
