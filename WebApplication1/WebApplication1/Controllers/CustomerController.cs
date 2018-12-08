@@ -7,24 +7,12 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
-    public class TestController : Controller
+    public class CustomerController : Controller
     {
-        // GET: Test
-       public string GetString()
+        // GET: Customer
+        public ActionResult Index()
         {
-            return "hhh";
-        }
 
-        public Cust getCust()
-        {
-            Cust ct = new Cust();
-            ct.CustomerName = "fzh";
-            ct.Add = "gl";
-            return ct;
-        }
-
-        public ActionResult GetView()
-        {
             string greeting;
             DateTime dt = DateTime.Now;
             int h = dt.Hour;
@@ -32,7 +20,7 @@ namespace WebApplication1.Controllers
             {
                 greeting = "早上好";
             }
-            else if(h>11&&h<13)
+            else if (h > 11 && h < 13)
             {
                 greeting = "中午好";
             }
@@ -43,15 +31,15 @@ namespace WebApplication1.Controllers
             //ViewData["greeting"] = greeting;
             ViewBag.Greeting = greeting;
 
-            Employe emp = new Employe();
-            emp.Name = "李四";
-            emp.Salary = 20002;
-           
+            Cust ct = new Cust();
+
+            ct.CustomerName = "小熊";
+            ct.Add = "日本";
+
             //ViewData["EmpKey"] = emp;
-            ViewBag.EmpKey = emp;
 
-            return View("MyView",emp);
 
+            return View(ct);
         }
     }
 }

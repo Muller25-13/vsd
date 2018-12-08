@@ -5,24 +5,12 @@ using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
 
+
 namespace WebApplication1.Controllers
 {
-    public class TestController : Controller
+    public class CustController : Controller
     {
-        // GET: Test
-       public string GetString()
-        {
-            return "hhh";
-        }
-
-        public Cust getCust()
-        {
-            Cust ct = new Cust();
-            ct.CustomerName = "fzh";
-            ct.Add = "gl";
-            return ct;
-        }
-
+        // GET: Cust
         public ActionResult GetView()
         {
             string greeting;
@@ -32,7 +20,7 @@ namespace WebApplication1.Controllers
             {
                 greeting = "早上好";
             }
-            else if(h>11&&h<13)
+            else if (h > 11 && h < 13)
             {
                 greeting = "中午好";
             }
@@ -43,14 +31,15 @@ namespace WebApplication1.Controllers
             //ViewData["greeting"] = greeting;
             ViewBag.Greeting = greeting;
 
-            Employe emp = new Employe();
-            emp.Name = "李四";
-            emp.Salary = 20002;
-           
-            //ViewData["EmpKey"] = emp;
-            ViewBag.EmpKey = emp;
+            Cust ct = new Cust();
 
-            return View("MyView",emp);
+            ct.CustomerName = "小熊";
+            ct.Add = "日本";
+
+            //ViewData["EmpKey"] = emp;
+            
+
+            return View("GetView",ct);
 
         }
     }

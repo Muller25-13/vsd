@@ -1,0 +1,33 @@
+﻿@using WebApplication1.Models
+@model Cust
+@{
+    Layout = null;
+    //Employe emp = (Employe)ViewData["EmpKey"];
+    //Employe emp = ViewBag.EmpKey;
+    //string t =(string)ViewData["greeting"];
+    string t = ViewBag.Greeting;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetView</title>
+</head>
+<body>
+    <div>
+        <h1>@Model.CustomerName,@t</h1>
+
+        <hr />
+        <h2>顾客信息</h2>
+        <p>姓名:@Model.CustomerName</p>
+        <p>地址:@Model.Add</p>
+
+
+
+
+    </div>
+
+</body>
+</html>

@@ -1,8 +1,11 @@
-﻿@using WebApplication1.Models;
+﻿@using WebApplication1.Models
+@model Employe
 @{
     Layout = null;
-    Employe emp = (Employe)ViewData["EmpKey"];
-    string t =(string)ViewData["greeting"];
+    //Employe emp = (Employe)ViewData["EmpKey"];
+    //Employe emp = ViewBag.EmpKey;
+    //string t =(string)ViewData["greeting"];
+    string t = ViewBag.Greeting;
 }
 
 <!DOCTYPE html>
@@ -14,11 +17,25 @@
 </head>
 <body>
     <div> 
-        <h1>@emp.Name,@t</h1>
-        <h1>@emp.Name,@((string)ViewData["greeting"])</h1>
+        <h1>@Model.Name,@t</h1>
+        <h1>@Model.Name,@((string)ViewData["greeting"])</h1>
+        <hr />
         <h2>员工信息</h2>
-        <p>姓名:@emp.Name</p>
-        <p>工资:@emp.Salary.ToString("c")</p>
+        <p>姓名:@Model.Name</p>
+        <p>工资:@Model.Salary.ToString("c")</p>
+      
+            @{
+                if (Model.Salary > 1000)
+                {
+                    <p>土豪</p>
+                }
+                else
+                {
+                    <p>屌丝</p>                
+                }
+            }
+       
+        
     </div>
 </body>
 </html>

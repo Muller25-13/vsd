@@ -18,9 +18,6 @@ namespace WebApplication1.Models
             set;
         }
 
-        public override string ToString()
-        {
-            return this.CustomerName + "-" + this.Add;
-        }
+        
     }
 }
