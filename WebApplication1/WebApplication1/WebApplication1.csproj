@@ -151,6 +151,7 @@
     <Compile Include="Controllers\AllController.cs" />
     <Compile Include="Controllers\CustController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\EmployeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
@@ -158,11 +159,13 @@
     </Compile>
     <Compile Include="Models\Cust.cs" />
     <Compile Include="Models\Employe.cs" />
+    <Compile Include="Models\EmployeeBusinessLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\All.cs" />
     <Compile Include="ViewModels\AllViewModel.cs" />
     <Compile Include="ViewModels\CustomerViewModel.cs" />
     <Compile Include="ViewModels\EmployeeViewModel.cs" />
+    <Compile Include="ViewModels\EmployeListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -208,6 +211,7 @@
     <Content Include="Views\Cust\GetView.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Test\ViewModel.cshtml" />
+    <Content Include="Views\Employe\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
