@@ -15,6 +15,21 @@ namespace WebApplication1.Controllers
         {
             EmployeListViewModel empListModel = new EmployeListViewModel();
 
+            empListModel.EmployeViewList = getEmpVmList();
+
+
+            empListModel.Greeting = getGreeting();
+          
+
+
+            empListModel.UserName = getUserName();
+
+            return View(empListModel);
+        }
+
+        [NonAction]
+        List<EmployeeViewModel>getEmpVmList()
+        {
             //实例化员工信息业务层
             EmployeeBusinessLayer empBL = new EmployeeBusinessLayer();
             //员工原始数据列表，获取来自业务层类的数据
@@ -23,7 +38,7 @@ namespace WebApplication1.Controllers
             var listEmpVm = new List<EmployeeViewModel>();
 
             //通过循环遍历员工原始数据数组，将数据一个一个的转换，并加入listEmpVm
-            foreach(var item in listEmp)
+            foreach (var item in listEmp)
             {
                 EmployeeViewModel empVmObj = new EmployeeViewModel();
                 empVmObj.EmployeeNmae = item.Name;
@@ -38,9 +53,13 @@ namespace WebApplication1.Controllers
                 }
                 listEmpVm.Add(empVmObj);
             }
-            //将处理过的数据列表送给强视图类型对象
-            empListModel.EmployeViewList = listEmpVm;
+            return listEmpVm;
 
+        }
+        
+        [NonAction]
+        string getGreeting()
+        {
             string greeting;
             DateTime dt = DateTime.Now;
             int h = dt.Hour;
@@ -56,10 +75,15 @@ namespace WebApplication1.Controllers
             {
                 greeting = "下午好";
             }
-            empListModel.Greeting = greeting;
-            empListModel.UserName = "Admin";
-
-            return View(empListModel);
+            return greeting;
+            
         }
+
+        [NonAction]
+        string getUserName()
+        {
+            return "Admin";
+        }
+
     }
 }

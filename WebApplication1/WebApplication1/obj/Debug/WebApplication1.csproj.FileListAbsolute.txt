@@ -118,3 +118,8 @@ D:\ddd1\vsd\WebApplication1\WebApplication1\bin\zh-Hans\System.Web.WebPages.Razo
 D:\ddd1\vsd\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
 D:\ddd1\vsd\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 D:\ddd1\vsd\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\ddd1\vsd\WebApplication1\WebApplication1\bin\EntityFramework.dll
+D:\ddd1\vsd\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\ddd1\vsd\WebApplication1\WebApplication1\bin\EntityFramework.xml
+D:\ddd1\vsd\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\ddd1\vsd\WebApplication1\WebApplication1\bin\zh-Hans\EntityFramework.resources.dll
