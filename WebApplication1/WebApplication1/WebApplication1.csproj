@@ -223,6 +223,8 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Test\ViewModel.cshtml" />
     <Content Include="Views\Employe\Index.cshtml" />
+    <Content Include="Views\Employe\CreateEmployee.cshtml" />
+    <Content Include="Views\Employe\AddNew.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -27,6 +27,11 @@ namespace WebApplication1.Controllers
             return View(empListModel);
         }
 
+        public ActionResult AddNew()
+        {
+            return View("CreateEmployee");
+        }
+
         [NonAction]
         List<EmployeeViewModel>getEmpVmList()
         {
